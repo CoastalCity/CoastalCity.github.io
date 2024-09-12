@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesetzbücher - Coastal City</title>
+    <title>Fraktionen - Coastal City Hardcore RP</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -125,7 +125,8 @@
             font-size: 1.2rem;
         }
 
-        section {
+        /* Fraktions Section */
+        .factions-section {
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 1200px;
@@ -134,47 +135,51 @@
             border-radius: 10px;
         }
 
-        h2 {
-            font-size: 2rem;
-            color: #333;
+        .factions-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .faction {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 20px;
+            flex: 1 1 22%; /* Adjust to fit 4 items in a row */
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #5b5b5b;
+        .faction img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
 
-        .law-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .law-list li {
-            margin-bottom: 20px;
-        }
-
-        .law-list a {
-            color: #ff0000;
+        .faction a {
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
             transition: color 0.3s;
         }
 
-        .law-list a:hover {
-            color: #ffcccc;
+        .faction a:hover {
+            color: #ff0000;
         }
 
-        .law-list img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
+        @media (max-width: 768px) {
+            .faction {
+                flex: 1 1 48%; /* Stack items in two columns */
+            }
         }
 
+        @media (max-width: 480px) {
+            .faction {
+                flex: 1 1 100%; /* Stack items in a single column */
+            }
+        }
+
+        /* Footer */
         footer {
             background-color: rgba(3, 3, 3, 0.8);
             color: #fff;
@@ -255,9 +260,8 @@
             border-top: 1px solid #fff;
             padding-top: 10px;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+                /* Responsive Design */
+                @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
             }
@@ -271,10 +275,10 @@
             }
 
             nav ul {
-                display: none;
+                display: none; /* Hide the menu items initially */
                 flex-direction: column;
                 position: absolute;
-                top: 60px;
+                top: 60px; /* Adjust this value based on header height */
                 right: 0;
                 background-color: rgba(0, 0, 0, 0.8);
                 width: 100%;
@@ -283,7 +287,7 @@
             }
 
             nav ul.show {
-                display: flex;
+                display: flex; /* Show the menu items when toggled */
             }
 
             nav ul li {
@@ -319,37 +323,49 @@
             <li><a href="SC.html">SaltyChat</a></li>
             <li><a href="rules.html">Regelwerk</a></li>
             <li><a href="gesetze.html">Gesetzbücher</a></li>
-            <li><a href="frak.html">Fraktions Webseiten</a></li>
+            <li><a href="gesetze.html">Fraktions Webseiten</a></li>
         </ul>
     </nav>
 
     <!-- Header -->
     <header>
-        <h1>Gesetzbücher von Coastal City</h1>
+        <h1>Unsere Fraktionen</h1>
     </header>
 
-    <!-- Gesetzesübersicht -->
-    <section>
-        <h2>Unsere Gesetze</h2>
-        <p>Hier findest du die wichtigsten Gesetzbücher und Regelwerke, die für unseren GTA V Roleplay-Server relevant sind. Sie sind in verschiedene Kategorien unterteilt, damit du schnell die gesuchten Informationen findest.</p>
-
-        <ul class="law-list">
-            <li>
-                <h3><a href="docs/STVO.pdf" target="_blank">Straßenverkehrsordnung (STVO)</a></h3>
-                <p>Regelungen für den Straßenverkehr und die Verkehrssicherheit.</p>
-                <img src="img/stvo-image.jpg" alt="STVO Bild">
-            </li>
-            <li>
-                <h3><a href="docs/STGB.pdf" target="_blank">Strafgesetzbuch (STGB)</a></h3>
-                <p>Gesetzesbuch über die allgemeinen strafrechtlichen Vorschriften.</p>
-                <img src="img/stgb-image.jpg" alt="STGB Bild">
-            </li>
-            <li>
-                <h3><a href="docs/WeitereGesetze.pdf" target="_blank">Weitere Gesetze</a></h3>
-                <p>Zusätzliche Gesetze und Regelungen, die für das Roleplay relevant sind.</p>
-                <img src="img/weitere-gesetze-image.jpg" alt="Weitere Gesetze Bild">
-            </li>
-        </ul>
+    <!-- Fraktionen -->
+    <section class="factions-section">
+        <div class="factions-container">
+            <div class="faction">
+                <a href="" title="LSPD Webseite">
+                    <img src="img/PD.png" alt="LSPD Logo">
+                    <h2>LSPD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://medicnet.ch/hp?c=9b1c93a6864c39e48417ee486b83c387" title="LSMD Webseite">
+                    <img src="img/MD.png" alt="LSMD Logo">
+                    <h2>LSMD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://fdnet.ch/hp?c=5648d7fb4f1ea9a69fd10fccacd7d007" title="LSFD Webseite">
+                    <img src="img/FD.png" alt="LSFD Logo">
+                    <h2>LSFD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="" title="Taxi">
+                    <img src="img/tx.png" alt="Taxi Logo">
+                    <h2>TAXI</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://mechnet.ch/beschweren?c=a6869a35be893ac2d85989c5cd605539" title="Mechaniker Webseite">
+                    <img src="img/lsc.png" alt="Mechaniker Logo">
+                    <h2>Mechaniker</h2>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -361,16 +377,16 @@
             <div class="footer-links">
                 <h3>Unsere Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="SC.html">SaltyChat</a></li>
                     <li><a href="rules.html">Regelwerk</a></li>
-                    <li><a href="/laws">Gesetzbücher</a></li>
+                    <li><a href="gesetze.html">Gesetzbücher</a></li>
                     <li><a href="https://discord.gg/coastalcity">Discord</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h3>Kontakt</h3>
-                <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
+                <p>Email: <a href="mailto:coastalcity24@gmail.com">coastalcity24@gmail.com</a></p>
             </div>
             <div class="footer-social">
                 <h3>Folge uns</h3>
