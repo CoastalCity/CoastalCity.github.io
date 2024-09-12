@@ -15,12 +15,22 @@
             color: #333;
         }
 
-        /* Navigation */
-        nav {
+ /* Navigation */
+ nav {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 1rem;
             position: relative;
             animation: slideInFromTop 1s ease-out;
+        }
+
+        nav .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #fff;
+            background: transparent;
+            border: none;
+            outline: none;
         }
 
         nav ul {
@@ -28,6 +38,7 @@
             justify-content: center;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
