@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesetzbücher - Coastal City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: relative;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #ff0000;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Header with animation */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            animation: scaleUp 2s ease-out;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5b5b5b;
+        }
+
+        .law-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .law-list li {
+            margin-bottom: 20px;
+        }
+
+        .law-list a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .law-list a:hover {
+            color: #ffcccc;
+        }
+
+        .law-list img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: rgba(3, 3, 3, 0.8);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links, .footer-contact, .footer-social {
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3, .footer-contact h3, .footer-social h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffcccc;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: #ffcccc;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 20px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 15px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="SC.html">SaltyChat</a></li>
+            <li><a href="rules.html">Regelwerk</a></li>
+            <li><a href="gesetze.html">Gesetzbücher</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Gesetzbücher von Coastal City</h1>
+    </header>
+
+    <!-- Gesetzesübersicht -->
+    <section>
+        <h2>Unsere Gesetze</h2>
+        <p>Hier findest du die wichtigsten Gesetzbücher und Regelwerke, die für unseren GTA V Roleplay-Server relevant sind. Sie sind in verschiedene Kategorien unterteilt, damit du schnell die gesuchten Informationen findest.</p>
+
+        <ul class="law-list">
+            <li>
+                <h3><a href="docs/STVO.pdf" target="_blank">Straßenverkehrsordnung (STVO)</a></h3>
+                <p>Regelungen für den Straßenverkehr und die Verkehrssicherheit.</p>
+                <img src="img/stvo-image.jpg" alt="STVO Bild">
+            </li>
+            <li>
+                <h3><a href="docs/STGB.pdf" target="_blank">Strafgesetzbuch (STGB)</a></h3>
+                <p>Gesetzesbuch über die allgemeinen strafrechtlichen Vorschriften.</p>
+                <img src="img/stgb-image.jpg" alt="STGB Bild">
+            </li>
+            <li>
+                <h3><a href="docs/WeitereGesetze.pdf" target="_blank">Weitere Gesetze</a></h3>
+                <p>Zusätzliche Gesetze und Regelungen, die für das Roleplay relevant sind.</p>
+                <img src="img/weitere-gesetze-image.jpg" alt="Weitere Gesetze Bild">
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/server-intro.png" alt="Coastal City Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Unsere Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="SC.html">SaltyChat</a></li>
+                    <li><a href="rules.html">Regelwerk</a></li>
+                    <li><a href="/laws">Gesetzbücher</a></li>
+                    <li><a href="https://discord.gg/coastalcity">Discord</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Folge uns</h3>
+                <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>

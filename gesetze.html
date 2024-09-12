@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoastalCity.eu</title>
+    <style>
+        /* Allgemeine Seiteinstellungen */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Verhindert Scrollen */
+        }
+
+        /* Hintergrundbild-Container */
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Hintergrundbild hinter dem Loader platzieren */
+            background-image: url('img/background.jpg'); /* Hintergrundbild Pfad */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5); /* Dunklerer Hintergrund für bessere Sichtbarkeit des Loaders */
+        }
+
+        /* Container für den Loader */
+        .loader {
+            position: relative;
+            width: 350px; /* Größerer Loader-Kreis */
+            height: 350px; /* Größerer Loader-Kreis */
+        }
+
+        /* Loader-Stil */
+        .loader-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 12px solid rgba(255, 255, 255, 0.3);
+            border-top: 12px solid #ffffff; /* Rote Farbe */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Positionierung und Stil für die CC */
+        .cc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px; /* Größere Schriftgröße */
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Animation für den Loader */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hintergrundbild-Container -->
+    <div class="background-container"></div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-inner"></div>
+        <div class="cc"></div>
+    </div>
+
+    <script>
+        // Warte, bis der Loader die Animation abgeschlossen hat
+        setTimeout(function() {
+            // Weiterleitung zur index.html
+            window.location.href = 'laws.html';
+        }, 2000); // Zeit in Millisekunden, die der Loader angezeigt wird
+    </script>
+</body>
+</html>

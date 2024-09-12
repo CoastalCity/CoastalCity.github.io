@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaltyChat - Coastal City</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            position: relative;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        /* Hover effect on nav links */
+        nav ul li a:hover {
+            color: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #ff0000;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+            background-color: #ff0000;
+        }
+
+        /* Slide-in effect for nav bar */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .box {
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+    background-color: rgba(3, 3, 3, 0.8);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcccc;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #ffcccc;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 20px 10px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 15px 5px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="SC.html">SaltyChat</a></li>
+            <li><a href="rules.html">Regelwerk</a></li>
+            <li><a href="gesetze.html">Gesetzbücher</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>SaltyChat</h1>
+        <p>Informationen und Anleitung zur Nutzung von SaltyChat.</p>
+    </header>
+
+    <!-- Download Section -->
+    <section>
+        <h2>Download</h2>
+        <p>Hier kannst du den SaltyChat-Client herunterladen, nutze bitte die 3.1.2: <a href="https://gaming.v10networks.com/saltychat/download/3.1.2">Download</a></p>
+    </section>
+
+    <!-- TeamSpeak Installation Tutorial -->
+    <section>
+        <h2>TeamSpeak Installation Schritt-für-Schritt</h2>
+        <p>Folge diesen Schritten, um TeamSpeak auf deinem Computer zu installieren.</p>
+
+        <div class="box">
+            <h3>Schritt 1: Download</h3>
+            <p>Lade die neueste Version von TeamSpeak Client 3 auf der offiziellen Webseite herunter. Achte dabei unbedingt, ob du den TS5 oder TS3 Client installierst.</p>
+            <a href="https://www.teamspeak.com/en/downloads/" title="TeamSpeak Download">Download TeamSpeak</a>
+            <img src="img/step1-download.png" alt="TeamSpeak Download-Schritt">
+        </div>
+
+        <div class="box">
+            <h3>Schritt 2: Installation</h3>
+            <p>Starte die heruntergeladene Installationsdatei und folge den Anweisungen des Installationsassistenten. Achte darauf, die richtigen Optionen auszuwählen.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 3: Erste Schritte</h3>
+            <p>Nach der Installation öffne TeamSpeak und konfiguriere deine Einstellungen. Du wirst aufgefordert, ein Profil zu erstellen und dich mit dem Server zu verbinden.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 4: SaltyChat installieren</h3>
+            <p>Schließe zunächst dein TeamSpeak und starte die Installation der SaltyChat-Version 3.1.2.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 5: Konfiguration</h3>
+            <p>Starte TeamSpeak erneut und gehe auf die Einstellungen unter "Extras". Gehe nun auf "Erweitert" und stelle sicher, dass das SaltyChat-Plug-in aktiviert ist.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 6: Server beitreten</h3>
+            <p>Gehe in TeamSpeak auf den Reiter "Verbindungen" und gib dort unsere TeamSpeak-Serveradresse ein: <strong>s03.ts3clan.de:9784</strong>.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 7: Verbinden</h3>
+            <p>Joine nun in den Channel "Warteraum" und trete unserem Server bei.</p>
+        </div>
+
+        <div class="box">
+            <h3>Schritt 8: Spaß</h3>
+            <p>Du hast es geschafft! Herzlichen Glückwunsch und willkommen auf Coastal City!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/server-intro.png" alt="Coastal City Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Unsere Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="SC.html">SaltyChat</a></li>
+                    <li><a href="rules.html">Regelwerk</a></li>
+                    <li><a href="gesetze.html">Gesetzbücher</a></li>
+                    <li><a href="https://discord.gg/coastalcity">Discord</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Folge uns</h3>
+                <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTOk"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>

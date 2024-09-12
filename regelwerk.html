@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastal City - Regelwerk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            position: relative;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        /* Hover effect on nav links */
+        nav ul li a:hover {
+            color: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #ff0000;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+            background-color: #ff0000;
+        }
+
+        /* Slide-in effect for nav bar */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        section p, section ul li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+    background-color: rgba(3, 3, 3, 0.8);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcccc;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #ffcccc;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 20px 10px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 15px 5px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="SC.html">SaltyChat</a></li>
+            <li><a href="rules.html">Regelwerk</a></li>
+            <li><a href="gesetze.html">Gesetzbücher</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Regelwerk</h1>
+    </header>
+
+<!-- Regelwerk Section -->
+<section>
+    <h2>Speicherung von Persönlichen Daten</h2>
+    <p>Beim Akzeptieren der Serverregeln stimmt man der Speicherung von persönlichen Daten zu. Dazu gehört nur die IP-Adresse. Wir bekommen keine anderen Daten durch das Betreten des Servers. Die IP-Adresse bleibt Server intern und wird nicht weitergegeben.</p>
+
+    <h2>§1 Allgemeine Regeln für jeden Nutzer!</h2>
+    <ul>
+        <li>Jeder ist gleich. Niemand darf wegen seines Aussehens, seines Geschlechts, seiner Religion, seiner sexuellen Orientierung oder aus anderen Beweggründen diskriminiert oder benachteiligt werden.</li>
+        <li>OOC (Out of Character) und IC (In Character) sind voneinander zu trennen.</li>
+        <li>Los Angeles ist eine Millionenstadt. Verhaltet euch dementsprechend.</li>
+        <li>Gefesselte Personen dürfen nicht grundlos zurückgelassen werden.</li>
+        <li>Fahrschüler dürfen nicht durch andere Spieler benachteiligt werden.</li>
+        <li>Bei Motorrädern ab einem kaputten Reifen darf man nur noch 50 km/h fahren, sobald beide kaputt sind „Rutscht es zu sehr” und man fällt runter und kann dementsprechend nicht weiterfahren.</li>
+        <li>Soundboards, die als Radio verwendet oder eine RP-Situation realistischer darstellen, sind erlaubt, die Benutzung darf andere Spieler jedoch nicht stören. Ist dies der Fall, sind sämtliche Sounds abzuschalten.</li>
+        <li>Rassistische Äußerungen sind nicht gestattet und werden bestraft.</li>
+        <li>Extremismus ist ebenfalls nicht gestattet.</li>
+        <li>Jegliche sexuelle Belästigung/Mobbing wird auf dem Server nicht geduldet. Beachtet hierbei, dass hier OOC & IC getrennte Wege gehen.</li>
+        <li>15 min vor und 15 min nach dem Serverrestart dürfen keine Aktionen gestartet werden, z.B. Überfälle, Entführungen, Gangkriege etc.</li>
+        <li>Das Handeln mit Echtgeld ist grundsätzlich komplett verboten!</li>
+        <li>Das Spielen auf dem Server ist ab dem 16 Lebensjahr. Das Team behält sich das Recht einer Kontrolle vor.</li>
+    </ul>
+
+    <h2>§ 1.1 Allgemeines Wissen</h2>
+    <h3>In Character (IC)</h3>
+    <p>Du darfst nur Informationen und Wissen verwenden, welches du IC erfahren hast. Discord Informationen gehören auch dazu.</p>
+
+    <h3>Out Of Character (OOC)</h3>
+    <p>Alles, was außerhalb des Spiels stattfindet, ist OOC und darf IC nicht verwendet werden.</p>
+
+    <h3>Random Deathmatch (RDM)</h3>
+    <p>Das Angreifen oder Verletzen von Mitspielern ohne RP Hintergrund ist verboten.</p>
+
+    <h3>Vehicle Deathmatch (VDM)</h3>
+    <p>Das absichtliche Überfahren von anderen Spielern ist verboten. (Ausnahmesituationen sind gestattet.)</p>
+
+    <h3>RP-Flucht</h3>
+    <p>Das Verlassen des Servers innerhalb einer aktiven RP-Situation ist strengstens untersagt. Darunter fallen Flucht in eine für andere nicht begehbare Wohnung/Firma oder andere nicht begehbare Gebäude.</p>
+
+    <h3>Fail-RP</h3>
+    <p>Unter FailRP versteht man unrealistische Aktionen, Beispiele:</p>
+    <ul>
+        <li>Mit einem Supersportwagen Offroad fahren.</li>
+        <li>Mit einem demolierten Fahrzeug weiterfahren.</li>
+        <li>Mit 200 km/h eine Schanze hochfahren.</li>
+        <li>Ein komplett zerstörtes Fahrzeug fahren oder sogar reparieren.</li>
+        <li>Nach einer schweren Verletzung so zu tun, als wäre nie etwas geschehen, z.B. ein Arm ist gebrochen und man benutzt ihn weiterhin ganz normal.</li>
+    </ul>
+
+    <h3>Offroading</h3>
+    <p>Folgende Fahrzeuge dürfen Offroad fahren:</p>
+    <ul>
+        <li>Geländefahrzeuge</li>
+        <li>Fahrräder</li>
+        <li>Militärfahrzeuge</li>
+        <li>Motorräder, die auf Offroad spezialisiert sind (Sanchez)</li>
+    </ul>
+
+    <h3>Power-RP</h3>
+    <p>Das Erfinden von Personen, Gütern und/oder Gegenständen etc. zur Vorteilsverschaffung des eigenen Charakters oder eines Dritten fällt unter Power-RP und ist untersagt. Genauso ist es untersagt, in einer RP-Situation seinem Gegenüber keinen Ausweg zu bieten darunter zählen beispielsweise:</p>
+    <ul>
+        <li>„Spring von der Brücke oder ich knalle dich ab!”</li>
+    </ul>
+
+    <h3>Combat Logging</h3>
+    <p>Das absichtliche Schließen des Spiels während einer RP-Situation, um beispielsweise den Inhalt seines Inventars zu retten, ist untersagt.</p>
+
+    <h2>§2 Hacking und Modifizierung der Spiel-Dateien</h2>
+    <p>Spieler dürfen keine externe Software benutzen, die ihnen Vorteile verschafft.</p>
+    <ul>
+        <li>Aimbot</li>
+        <li>Mods, die bewusst Objekte entfernen, Himmel, Mülltonnen etc. (Ausnahmen werden bei sehr schlechter Hardware gestattet)</li>
+        <li>Alles was Waffenschüsse erkennbarer macht etc.</li>
+        <li>ESP</li>
+        <li>Jegliches Mod-Menü im Allgemeinen!</li>
+    </ul>
+    <p>Erlaubte Modifikationen sind z.B.:</p>
+    <ul>
+        <li>Grafikmodus wie Redux oder Natural Vision Evolved</li>
+        <li>Reshade (Ohne Einstellungen, die einem einen Vorteil verschaffen)</li>
+        <li>Modifikationen der Waffen, die nur du sehen kannst und die dir keinen Vorteil geben (Messer wird zum grünen Messer z.B.)</li>
+    </ul>
+
+    <h2>§3 Charaktererstellung & Nickname</h2>
+    <p>Jeder Roleplay-Charakter sollte einzigartig sein. Daher sollte sich jeder Spieler Gedanken über die Eigenschaften, das Verhalten und die Geschichte seines Charakters machen, bevor er mit dem Roleplay startet.</p>
+    <p>Das Spielen von mentalen Krankheiten ist nur dann geduldet, wenn diese dem Charakter entsprechen und diesem keine Vorteile verschaffen.</p>
+    <p>Lebensbedrohliche Krankheiten sind nicht erwünscht, außer sie versprechen gute Roleplay Interaktionen! (Chemie Lehrer mit Krebs z.B.) Hierbei natürlich beachten, dass man nicht den richtigen Namen verwendet, wenn man einen bereits bekannten Charakter verwendet. Walter White wird zu Waldfried Black, ausgeschlossene Bekanntheiten wären Deutschlands ehemaliger Führer, so etwas wird auch mit einem ähnlichen Namen NICHT geduldet und bringt einen permanenten Ausschluss mit sich.</p>
+    <p>Der Nickname darf generell nicht anstößig sein und keine Beleidigungen oder sonstige rassistische Formulierungen beinhalten. Das Nachahmen von Personen des öffentlichen Lebens oder dessen Vergangenheit ist verwerflich (Beispiel: Wilma Hartmann) und untersagt.</p>
+    <p>Das Serverteam behält es sich vor, alle Sonderzeichen zu verbieten: + # - {}, [], (), usw.</p>
+
+    <h2>§4 Maskierung</h2>
+    <ul>
+        <li>Ein maskierter Spieler kann nicht allein an der Stimme identifiziert werden.</li>
+        <li>Personen können 1h lang mit der Kleidung identifiziert werden. Diese Regel gilt nicht für Mitglieder einer Fraktion, diese werden an ihrer Kleidung erkannt.</li>
+        <li>Stimmverzerrer sind nur am Telefon erlaubt, um ihre Identität zu schützen.</li>
+        <li>Unter „Vollmaskierung” versteht man, wenn mindestens Mund und Nase bedeckt sind. Ein Bart zählt nicht als Maskierung.</li>
+    </ul>
+
+    <h2>§5 New-Life-Regel</h2>
+    <p>Nachdem man von einem Mediziner reanimiert wurde, darf man sich an alles erinnern, außer an das, was während der Bewusstlosigkeit passiert ist.</p>
+    <p>Man darf nicht an derselben RP-Situation erneut teilnehmen und sich 30 Minuten lang dem Ort des Geschehens nicht nähern. Wenn man ausblutet (beim Notfallmediziner aufwacht), hat man alles vergessen, was während des gesamten IC Lebens passiert ist.</p>
+
+    <h2>§6 Fraktionen</h2>
+    <h3>Funktionssperre</h3>
+    <ul>
+        <li>Die Fraktion Sperre beträgt 3 Tage, das heißt dass du, sobald du aus deiner Fraktion austrittst, 3 Tage warten musst, bis du dich einer neuen Fraktion anschließen kannst.</li>
+        <li>Für Leute, die ihren Job wie Unterwäsche wechseln, wird dies auf 7 Tage erhöht!</li>
+    </ul>
+
+    <h2>§7 Schuss-Ankündigung</h2>
+    <p>Schuss-Ankündigungen gibt es bei uns keine, es braucht lediglich einen triftigen Grund. Eine Schuss-Ankündigung gilt automatisch auch für beteiligte Personen, die kenntlich zu einer Fraktion gehören.</p>
+
+    <h2>§8 Geiselnahme, Raub & Überfall</h2>
+    <p>Bei einem Überfall steht das RP im Vordergrund.</p>
+    <p>Ein Ladenraub ist ab 2 Polizisten möglich.</p>
+    <p>Anzahl der erlaubten Täter bei Überfällen:</p>
+    <ul>
+        <li>Ladenraub: 1 bis 4 Täter (auch bei einer Gang besteht diese Regel)</li>
+    </ul>
+    <p>Es dürfen maximal 5 Geiseln genommen werden. Für eine Geisel dürfen maximal 20.000$ gefordert werden. Fake-Geiseln sind strengstens verboten und werden mit einem Bann bestraft.</p>
+
+    <h2>§9 Support</h2>
+    <ul>
+        <li>Supportfälle müssen innerhalb von 24 Stunden gemeldet werden, ansonsten werden diese nicht mehr bearbeitet. (Außer es handelt sich um ein schweres Vergehen, z.B. Bugusing, Cheating.)</li>
+        <li>Ein Supportfall kann nur von beteiligten Personen gemeldet werden.</li>
+        <li>Clips/Livestreams dürfen nur von betroffenen Personen verwendet werden.</li>
+        <li>Live Streams mit genauer Timestamp (Uhrzeit des Geschehens) müssen übermittelt werden.</li>
+        <li>Supportfälle werden ohne Beweismaterial nicht bearbeitet. Clips sollten die gesamte Situation umfassen. Der gesamte Ton muss zu hören sein.</li>
+        <li>Erstattungen erfolgen nur mit einem ersichtlichen Videobeweis. Ohne Clip/s können keine Erstattungen erfolgen!</li>
+        <li>Bugs/Glitches müssen im Support oder per Ticket gemeldet werden.</li>
+        <li>Wenn ihr ungewöhnlich hohe Geldsummen/Waffen durch einen vermeintlichen Cheater geschenkt bekommt, muss dies im Support gemeldet werden und darf bis zur Klärung nicht ausgegeben werden.</li>
+    </ul>
+
+    <h2>§10 Streaming</h2>
+    <ul>
+        <li>Um auf unserem Server zu streamen, brauchst du keine Erlaubnis, es sollten jedoch die allgemeinen Streaming-Regeln beachtet werden:</li>
+        <li>Das Streamen von Support-Gesprächen ist untersagt.</li>
+        <li>Du repräsentierst den Server mit deinem Roleplay. Behalte das stets im Hinterkopf.</li>
+        <li>WICHTIG: Die Inhalte sollten mit [CoastalCity] gekennzeichnet werden + der Discord Server sollte verlinkt werden.</li>
+        <li>Du genießt als Streamer keinen besonderen Schutz. Beachte, dass Regelverstöße auch durch die Taten im Stream sanktioniert werden können.</li>
+    </ul>
+
+    <h2>Metagaming</h2>
+    <p>Das Nutzen von Informationen, die dein IC Charakter nicht eigenständig erfahren hat. Somit zählt ebenfalls das Anschauen eines Streams (Stream Snipen), um dortige Informationen OOC, dann IC zu verwenden. Absprachen OOC sind ebenfalls verboten!</p>
+
+    <h2>BSG-Backseat Gaming</h2>
+    <p>Solltest du dein RP auf einer öffentlichen Streaming-Plattform streamen und einer deiner Zuschauer gibt dir einen Hinweis darauf, was du tun solltest, um diesen zu ignorieren. Bleib in deiner Rolle. Nutzst du den Hinweis deines Zuschauers oder eines anderen Außenstehenden, bezeichnet man das als Backseat Gaming. Verboten!</p>
+
+    <h2>§11 AFK-Regelung</h2>
+    <ul>
+        <li>Wer AFK (Away From Keyboard) geht, sollte seinen Charakter in Sicherheit bringen. Darunter versteht man, dass der Charakter nicht regungslos in einer Menschenmenge oder auf einer Straße stehen sollte.</li>
+        <li>Um AFK zu gehen, kann man viele Ausreden benutzen. Jeder Spieler sollte realistische und der Situation entsprechend sinngemäße Aussagen treffen und diese dann IC umsetzen.</li>
+        <li>Wird man selbst über eine Servernachricht in den Support gerufen, darf man dies nicht im RP erwähnen, um sich vom RP zu entfernen. Wenn ihr mit eurem Finger in die Luft zeigt, sollte das für jeden verständlich sein. Bsp: „Ich muss kurz telefonieren” danach entfernt man sich aus der RP-Situation.</li>
+        <li>Man darf nicht länger als 10 Minuten AFK gehen (Länger als 10 Minuten AFK —> Kick).</li>
+        <li>Unwissenheit schützt nicht vor Strafe!</li>
+    </ul>
+
+    <h2>§12 Grauzonen im Regelwerk</h2>
+    <p>Das gezielte Ausnutzen von Grauzonen im Regelwerk ist untersagt und wird sanktioniert.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="img/server-intro.png" alt="Coastal City Logo">
+        </div>
+        <div class="footer-links">
+            <h3>Unsere Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="SC.html">SaltyChat</a></li>
+                <li><a href="rules.html">Regelwerk</a></li>
+                <li><a href="gesetze.html">Gesetzbücher</a></li>
+                <li><a href="https://discord.gg/coastalcity">Discord</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Kontakt</h3>
+            <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
+        </div>
+        <div class="footer-social">
+            <h3>Folge uns</h3>
+            <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTOk"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
+    </div>
+</footer>
+</body>
+</html>
