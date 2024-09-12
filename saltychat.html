@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaltyChat - Coastal City</title>
     <style>
+        /* Allgemeine Stile */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -244,8 +245,28 @@
                 padding: 20px 10px;
             }
 
+            nav ul {
+                display: none; /* Menü standardmäßig ausblenden */
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* Höhe des Headers */
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                text-align: center;
+                z-index: 1000;
+            }
+
+            nav ul.show {
+                display: flex; /* Menü anzeigen, wenn die Klasse show vorhanden ist */
+            }
+
             nav ul li {
-                margin: 0 10px;
+                margin: 10px 0;
+            }
+
+            nav .menu-toggle {
+                display: block;
             }
         }
 
@@ -369,6 +390,18 @@
             <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript für das Dropdown-Menü
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var navList = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navList.classList.toggle('show');
+            });
+        });
+    </script>
 
 </body>
 </html>
