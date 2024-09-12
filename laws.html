@@ -15,8 +15,8 @@
             color: #333;
         }
 
- /* Navigation */
- nav {
+        /* Navigation */
+        nav {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 1rem;
             position: relative;
@@ -269,6 +269,30 @@
             section {
                 padding: 20px 10px;
             }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                text-align: center;
+                z-index: 1000;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav .menu-toggle {
+                display: block;
+            }
         }
 
         @media (max-width: 480px) {
@@ -289,6 +313,7 @@
 <body>
     <!-- Navigation -->
     <nav>
+        <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="SC.html">SaltyChat</a></li>
@@ -355,5 +380,11 @@
             <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

@@ -122,86 +122,85 @@
         }
 
         footer {
-    background-color: rgba(3, 3, 3, 0.8);
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 40px;
-}
+            background-color: rgba(3, 3, 3, 0.8);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
 
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.footer-logo img {
-    max-width: 150px;
-    margin-bottom: 20px;
-}
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
 
-.footer-links, .footer-contact, .footer-social {
-    margin-bottom: 20px;
-}
+        .footer-links, .footer-contact, .footer-social {
+            margin-bottom: 20px;
+        }
 
-.footer-links h3, .footer-contact h3, .footer-social h3 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    color: #fff;
-}
+        .footer-links h3, .footer-contact h3, .footer-social h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.footer-links ul li {
-    margin-bottom: 10px;
-}
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
 
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-.footer-links ul li a:hover {
-    color: #ffcccc;
-}
+        .footer-links ul li a:hover {
+            color: #ffcccc;
+        }
 
-.footer-contact p {
-    margin: 5px 0;
-}
+        .footer-contact p {
+            margin: 5px 0;
+        }
 
-.footer-contact a {
-    color: #fff;
-    text-decoration: none;
-}
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-.footer-contact a:hover {
-    color: #ffcccc;
-}
+        .footer-contact a:hover {
+            color: #ffcccc;
+        }
 
-.footer-social a {
-    margin: 0 10px;
-    display: inline-block;
-}
+        .footer-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
 
-.footer-social img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-}
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
 
-.footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #fff;
-    padding-top: 10px;
-}
-
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -217,8 +216,28 @@
                 padding: 20px 10px;
             }
 
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                width: 100%;
+                text-align: center;
+                z-index: 1000;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
             nav ul li {
-                margin: 0 10px;
+                margin: 10px 0;
+            }
+
+            nav .menu-toggle {
+                display: block;
             }
         }
 
@@ -234,20 +253,13 @@
             section {
                 padding: 15px 5px;
             }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
+        <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="SC.html">SaltyChat</a></li>
@@ -420,35 +432,45 @@
     <h2>§12 Grauzonen im Regelwerk</h2>
     <p>Das gezielte Ausnutzen von Grauzonen im Regelwerk ist untersagt und wird sanktioniert.</p>
 </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/server-intro.png" alt="Coastal City Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Unsere Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="SC.html">SaltyChat</a></li>
+                    <li><a href="rules.html">Regelwerk</a></li>
+                    <li><a href="gesetze.html">Gesetzbücher</a></li>
+                    <li><a href="https://discord.gg/coastalcity">Discord</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Folge uns</h3>
+                <a href="https://www.tiktok.com/@coastalcity2024" target="_blank">
+                    <img src="img/tiktok-icon.png" alt="TikTok">
+                </a>
+                <a href="https://discord.gg/coastalcity" target="_blank">
+                    <img src="img/discord-icon.png" alt="Discord">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="img/server-intro.png" alt="Coastal City Logo">
-        </div>
-        <div class="footer-links">
-            <h3>Unsere Links</h3>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="SC.html">SaltyChat</a></li>
-                <li><a href="rules.html">Regelwerk</a></li>
-                <li><a href="gesetze.html">Gesetzbücher</a></li>
-                <li><a href="https://discord.gg/coastalcity">Discord</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>Kontakt</h3>
-            <p>Email: <a href="mailto:info@coastalcity.de">info@coastalcity.de</a></p>
-        </div>
-        <div class="footer-social">
-            <h3>Folge uns</h3>
-            <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTOk"></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Coastal City. Alle Rechte vorbehalten.</p>
-    </div>
-</footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
