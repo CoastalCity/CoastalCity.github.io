@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal City Hardcore RP</title>
+    <title>Fraktionen - Coastal City Hardcore RP</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -125,7 +125,8 @@
             font-size: 1.2rem;
         }
 
-        section {
+        /* Fraktions Section */
+        .factions-section {
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 1200px;
@@ -134,36 +135,51 @@
             border-radius: 10px;
         }
 
-        section img {
-            width: 100%;
+        .factions-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .faction {
+            text-align: center;
+            margin: 20px;
+            flex: 1 1 22%; /* Adjust to fit 4 items in a row */
+        }
+
+        .faction img {
+            max-width: 100px;
             height: auto;
             border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: center;
-            color: #5b5b5b;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
             margin-bottom: 10px;
         }
 
+        .faction a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .faction a:hover {
+            color: #ff0000;
+        }
+
+        @media (max-width: 768px) {
+            .faction {
+                flex: 1 1 48%; /* Stack items in two columns */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faction {
+                flex: 1 1 100%; /* Stack items in a single column */
+            }
+        }
+
+        /* Footer */
         footer {
             background-color: rgba(3, 3, 3, 0.8);
             color: #fff;
@@ -244,9 +260,8 @@
             border-top: 1px solid #fff;
             padding-top: 10px;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
+                /* Responsive Design */
+                @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
             }
@@ -308,57 +323,49 @@
             <li><a href="SC.html">SaltyChat</a></li>
             <li><a href="rules.html">Regelwerk</a></li>
             <li><a href="gesetze.html">Gesetzbücher</a></li>
-            <li><a href="frak.html">Fraktions Webseiten</a></li>
+            <li><a href="gesetze.html">Fraktions Webseiten</a></li>
         </ul>
     </nav>
 
     <!-- Header -->
     <header>
-        <h1>Willkommen bei Coastal City GTA V RP!</h1>
+        <h1>Unsere Fraktionen</h1>
     </header>
 
-    <!-- Server-Beschreibung -->
-    <section>
-        <h2>Über unseren Server</h2>
-        <p>Coastal City Hardcore RP ist ein einzigartiger GTA V Roleplay-Server, der sich auf immersive und realistische Spielerfahrungen spezialisiert hat. Hier kannst du deinen eigenen Charakter entwickeln und in eine aufregende Welt eintauchen, in der alles möglich ist. Unsere Community legt großen Wert auf detailliertes RP, packende Storylines und dynamische Interaktionen.</p>
-        <img src="img/server-intro.png" alt="Server Intro Bild">
-    </section>
-
-    <!-- Discord-Beitritt -->
-    <section>
-        <h2>So trittst du unserem Discord bei</h2>
-        <p>Um mit anderen Spielern zu interagieren, benötigst du unseren Discord. Dort findest du alle Informationen zu den Regeln, Events und Neuigkeiten des Servers. Folge einfach diesem Link und trete unserer Community bei. Mach dich bereit für spannende Abenteuer!</p>
-        <a href="https://discord.gg/coastalcity" title="Tritt unserem Discord bei">
-            <img src="img/discord-join.jpg" alt="Discord Bild">
-        </a>
-    </section>
-
-    <!-- Patches und Updates -->
-    <section>
-        <h2>Neueste Patches und Updates</h2>
-        <p>Wir arbeiten stetig daran, Coastal City zu verbessern. Mit regelmäßigen Updates und neuen Features sorgen wir dafür, dass das Spielerlebnis aufregend bleibt. Hier sind einige unserer jüngsten Patches:</p>
-        <ul>
-            <li>Neue Fahrzeuge und Waffen hinzugefügt</li>
-            <li>Verbesserte Server-Performance für stabileres Gameplay</li>
-            <li>Neues Wirtschaftssystem eingeführt</li>
-            <li>Viele Bugfixes und Verbesserungen</li>
-        </ul>
-        <img src="img/patches-updates.jpg" alt="Patches und Updates Bild">
-    </section>
-
-    <!-- Specials -->
-    <section>
-        <h2>Unsere Specials</h2>
-        <p>Coastal City bietet regelmäßig Specials und einzigartige Events an. Von Heists über Rennen bis hin zu speziellen RP-Events – bei uns kommt keine Langeweile auf! Sei dabei und erlebe die besten Events der RP-Community!</p>
-        <a href="https://servers.fivem.net/servers/detail/pj6r5y" title="Tritt unserem Server bei">
-            <img src="img/special-events.png" alt="Special Events Bild">
-        </a>
-    </section>
-
-    <section>  
-        <h2> Server Infos </h2>
-        <iframe src="https://discord.com/widget?id=1140310812196618271&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-       <!-- <iframe src="https://cfx.re/join/pj6r5y" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
+    <!-- Fraktionen -->
+    <section class="factions-section">
+        <div class="factions-container">
+            <div class="faction">
+                <a href="" title="LSPD Webseite">
+                    <img src="img/PD.png" alt="LSPD Logo">
+                    <h2>LSPD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://medicnet.ch/hp?c=9b1c93a6864c39e48417ee486b83c387" title="LSMD Webseite">
+                    <img src="img/MD.png" alt="LSMD Logo">
+                    <h2>LSMD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://fdnet.ch/hp?c=5648d7fb4f1ea9a69fd10fccacd7d007" title="LSFD Webseite">
+                    <img src="img/FD.png" alt="LSFD Logo">
+                    <h2>LSFD</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="" title="Taxi">
+                    <img src="img/tx.png" alt="Taxi Logo">
+                    <h2>TAXI</h2>
+                </a>
+            </div>
+            <div class="faction">
+                <a href="https://mechnet.ch/hp?c=a6869a35be893ac2d85989c5cd605539" title="Mechaniker Webseite">
+                    <img src="img/lsc.png" alt="Mechaniker Logo">
+                    <h2>Mechaniker</h2>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -384,7 +391,7 @@
             </div>
             <div class="footer-social">
                 <h3>Folge uns</h3>
-                <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTOk"></a>
+                <a href="https://www.tiktok.com/@coastalcity2024" target="_blank"><img src="img/TT-icon.png" alt="TikTok"></a>
             </div>
         </div>
         <div class="footer-bottom">
