@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fraktionen - Coastal City Hardcore RP</title>
+    <title>Coastal City Hardcore RP - News</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -84,7 +84,7 @@
             }
         }
 
-        /* Header with animation */
+        /* Header */
         header {
             text-align: center;
             padding: 50px 20px;
@@ -125,8 +125,7 @@
             font-size: 1.2rem;
         }
 
-        /* Fraktions Section */
-        .factions-section {
+        section {
             padding: 40px 20px;
             margin: 20px auto;
             max-width: 1200px;
@@ -135,51 +134,26 @@
             border-radius: 10px;
         }
 
-        .factions-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .faction {
-            text-align: center;
-            margin: 20px;
-            flex: 1 1 22%; /* Adjust to fit 4 items in a row */
-        }
-
-        .faction img {
-            max-width: 100px;
+        section img {
+            width: 100%;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin: 20px 0;
         }
 
-        .faction a {
+        h2 {
+            font-size: 2rem;
             color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            display: block;
-            margin-top: 10px;
-            transition: color 0.3s;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .faction a:hover {
-            color: #ff0000;
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+            color: #5b5b5b;
         }
-
-        @media (max-width: 768px) {
-            .faction {
-                flex: 1 1 48%; /* Stack items in two columns */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .faction {
-                flex: 1 1 100%; /* Stack items in a single column */
-            }
-        }
-
-        /* Footer */
         footer {
             background-color: rgba(3, 3, 3, 0.8);
             color: #fff;
@@ -260,8 +234,9 @@
             border-top: 1px solid #fff;
             padding-top: 10px;
         }
-                /* Responsive Design */
-                @media (max-width: 768px) {
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
             }
@@ -275,10 +250,10 @@
             }
 
             nav ul {
-                display: none; /* Hide the menu items initially */
+                display: none;
                 flex-direction: column;
                 position: absolute;
-                top: 60px; /* Adjust this value based on header height */
+                top: 60px;
                 right: 0;
                 background-color: rgba(0, 0, 0, 0.8);
                 width: 100%;
@@ -287,7 +262,7 @@
             }
 
             nav ul.show {
-                display: flex; /* Show the menu items when toggled */
+                display: flex;
             }
 
             nav ul li {
@@ -320,7 +295,7 @@
         <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="NW.html">News</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="SC.html">SaltyChat</a></li>
             <li><a href="rules.html">Regelwerk</a></li>
             <li><a href="gesetze.html">Gesetzbücher</a></li>
@@ -330,43 +305,23 @@
 
     <!-- Header -->
     <header>
-        <h1>Unsere Fraktionen</h1>
+        <h1>Aktuelle Neuigkeiten und Ankündigungen</h1>
     </header>
 
-    <!-- Fraktionen -->
-    <section class="factions-section">
-        <div class="factions-container">
-            <div class="faction">
-                <a href="" title="LSPD Webseite">
-                    <img src="img/PD.png" alt="LSPD Logo">
-                    <h2>LSPD</h2>
-                </a>
-            </div>
-            <div class="faction">
-                <a href="https://medicnet.ch/hp?c=9b1c93a6864c39e48417ee486b83c387" title="LSMD Webseite">
-                    <img src="img/MD.png" alt="LSMD Logo">
-                    <h2>LSMD</h2>
-                </a>
-            </div>
-            <div class="faction">
-                <a href="https://fdnet.ch/hp?c=5648d7fb4f1ea9a69fd10fccacd7d007" title="LSFD Webseite">
-                    <img src="img/FD.png" alt="LSFD Logo">
-                    <h2>LSFD</h2>
-                </a>
-            </div>
-            <div class="faction">
-                <a href="" title="Taxi">
-                    <img src="img/tx.png" alt="Taxi Logo">
-                    <h2>TAXI</h2>
-                </a>
-            </div>
-            <div class="faction">
-                <a href="https://mechnet.ch/hp?c=a6869a35be893ac2d85989c5cd605539" title="Mechaniker Webseite">
-                    <img src="img/lsc.png" alt="Mechaniker Logo">
-                    <h2>Mechaniker</h2>
-                </a>
-            </div>
-        </div>
+    <!-- News Section -->
+    <section>
+        <h2>Neueste Ankündigungen</h2>
+        <article>
+            <h3>Beta Realese: Wir öffnen unsere Gates</h3>
+            <p>Wir sind Ready to Go, am 13.09.2024 ist unser Beta Realese. Um 20 Uhr geht es entlich los. Hol dir schnell deine Whitelist, aber achte darauf das du dich Vorher Registierst. Was Regestrieren? Ja, aber keine Angst du musst keine sehr Persöhnlichen daten abgeben. Beeile dich es Dauert nicht mehr lange!</p>
+            <img src="img/server-intro.png" alt="Server Logo">
+        </article>
+       <!-- <article>
+            <h3>Event: Coastal City Heist 2024!</h3>
+            <p>Mach dich bereit für unser größtes Event des Jahres: den Coastal City Heist 2024! Du kannst mit deinem Team an epischen Überfällen teilnehmen und tolle Preise gewinnen. Melde dich jetzt auf unserem Discord an!</p>
+            <img src="img/heist-event.jpg" alt="Heist Event Bild">
+        </article>-->
+        <!-- Weitere Ankündigungen können hier hinzugefügt werden -->
     </section>
 
     <!-- Footer -->
