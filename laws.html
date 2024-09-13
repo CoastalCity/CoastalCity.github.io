@@ -175,6 +175,24 @@
             margin: 20px 0;
         }
 
+        /* Iframe styling */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         footer {
             background-color: rgba(3, 3, 3, 0.8);
             color: #fff;
@@ -331,24 +349,16 @@
     <!-- Gesetzesübersicht -->
     <section>
         <h2>Unsere Gesetze</h2>
-        <p>Hier findest du die wichtigsten Gesetzbücher und Regelwerke, die für unseren GTA V Roleplay-Server relevant sind. Sie sind in verschiedene Kategorien unterteilt, damit du schnell die gesuchten Informationen findest.</p>
+        <p>Hier findest du unser Gesetzbuch und die dazu gehörigen Strafen, die für unseren GTA V Roleplay-Server relevant sind. Sie sind in verschiedene Kategorien unterteilt, damit du schnell die gesuchten Informationen findest.</p>
 
         <ul class="law-list">
             <li>
-                <h3><a href="docs/STVO.pdf" target="_blank">Straßenverkehrsordnung (STVO)</a></h3>
-                <p>Regelungen für den Straßenverkehr und die Verkehrssicherheit.</p>
-                <img src="img/stvo-image.jpg" alt="STVO Bild">
+                <h3>Los Santos Gestzbuch</h3>
+                <div class="iframe-container">
+                    <iframe src="https://copnet.ch/strafen?c=85ea6fd7a2ca3960d0cf5201933ac998" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
             </li>
-            <li>
-                <h3><a href="docs/STGB.pdf" target="_blank">Strafgesetzbuch (STGB)</a></h3>
-                <p>Gesetzesbuch über die allgemeinen strafrechtlichen Vorschriften.</p>
-                <img src="img/stgb-image.jpg" alt="STGB Bild">
-            </li>
-            <li>
-                <h3><a href="docs/WeitereGesetze.pdf" target="_blank">Weitere Gesetze</a></h3>
-                <p>Zusätzliche Gesetze und Regelungen, die für das Roleplay relevant sind.</p>
-                <img src="img/weitere-gesetze-image.jpg" alt="Weitere Gesetze Bild">
-            </li>
+
         </ul>
     </section>
 
